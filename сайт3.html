@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PostN1161</title>
+</head>
+<body>
+
+<div class="divisor">
+    <div class="menu">
+        <h4><a href="сайт2.html">На Главную</a></h4>
+    </div>
+    <div class="content">
+<h2>ОКОРУбБI.ry</h2>
+        <p>Cumque repellat quam itaque ipsa tempora tempore repellendus, pariatur sunt minima est odio odit incidunt temporibus ex eveniet porro reiciendis. Necessitatibus debitis nesciunt voluptates excepturi itaque totam inventore quos enim.</p>
+        <div class="commentary">
+            <div>
+                <h3>Имя комментатора</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+     <style>
+         body{
+             margin: 0;
+         }
+         .menu{
+             width: 15%;
+             border: 1px solid;
+         }
+         .content{
+             width: 85%;
+             padding-left: 5px;
+         }
+         .divisor{
+             display: flex;
+         }
+         .commentary{
+             border: 1px solid;
+             padding-left: 5px;
+         }
+         p{
+            box-shadow: 0px 0px 10px grey ;
+         }
+     </style>
+
+
+<input type="text" id="anthor"/>
+<input type="text" id="body"/>
+<button id="button">Добавить комментарий</button>
+<div id="commentary"></div>
+<script>
+     let author = document.getElementById("author")
+     let body = document.getElementById("body")
+     let button = document.getElementById("button")
+     let comments = document.getElementById("commentary")
+function enter() {
+    comments.innerHTML +=`
+    <div>
+        <h3>${author.nodeValue}</h3>
+        <p>${body.value}</p>
+        </div>
+    `;
+    author.value = "";
+    body.value = "";
+}
+button.onclick = enter;
+</script>
+
+
+<script></script>
+
+
+</body>
+</html>
